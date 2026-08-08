@@ -1,7 +1,7 @@
 import Reveal from '../components/Reveal'
 import { business } from '../data'
 
-const store = '/images/apparel-rack.jpg'
+const store = '/images/rack.jpeg'
 
 const Icon = {
   mail: (

@@ -8,8 +8,8 @@ const details = [
     lede: 'Add a professional finish to your garments with quality embroidery that lasts.',
     body: 'We can customise a wide range of garments and products, digitising your logo for a clean, durable stitch every time.',
     points: ['Business uniforms & workwear', 'Sports team apparel', 'Caps, jackets & hoodies'],
-    hero: '/images/embroidery.jpg',
-    gallery: ['/images/embroidery-2.jpg', '/images/embroidery-detail.jpg', '/images/hero-threads.jpg'],
+    hero: '/images/embroidery_machine_3.jpeg',
+    gallery: ['/images/logo_patches_2.jpeg', '/images/kiss_hat_tshirt.jpeg', '/images/towels.jpeg'],
   },
   {
     slug: 'vinyl-printing',

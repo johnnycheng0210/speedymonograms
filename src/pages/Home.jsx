@@ -8,7 +8,7 @@ export default function Home() {
       {/* thread-spool image band, directly below the nav */}
       <div
         className="thread-band thread-band--top"
-        style={{ backgroundImage: `url(/images/hero-threads.jpg)` }}
+        style={{ backgroundImage: `url(/images/embroidery_machine_2.jpeg)` }}
         role="img"
         aria-label="Colourful embroidery thread spools"
       />
@@ -71,7 +71,7 @@ export default function Home() {
       <section className="section">
         <div className="container split">
           <Reveal className="split__media split__media--framed">
-            <img src="/images/apparel-rack.jpg" alt="Customised garments on the rack in store" loading="lazy" />
+            <img src="/images/shop.jpeg" alt="Inside the Speedy Monograms store" loading="lazy" />
           </Reveal>
           <Reveal delay={120} className="split__body">
             <h2 className="h2">Visit us in store</h2>

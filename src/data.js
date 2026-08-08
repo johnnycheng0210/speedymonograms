@@ -24,7 +24,7 @@ export const services = [
     slug: 'embroidery',
     title: 'Embroidery',
     short: 'A professional finish that lasts, stitched to your design.',
-    image: '/images/embroidery.jpg',
+    image: '/images/embroidery_machine.jpeg',
   },
   {
     slug: 'vinyl-printing',
