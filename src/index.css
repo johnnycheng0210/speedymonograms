@@ -558,7 +558,7 @@ p {
 .thread-band--top {
   margin-top: var(--nav-h);
   height: clamp(120px, 16vw, 220px); /* a slither, per the Figma */
-  background-position: center 50%;
+  background-position: center 53%;
 }
 /* a long, eased fade from the photo into the navy hero below — extra stops
    keep the transition smooth and free of visible banding */
