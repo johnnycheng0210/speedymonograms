@@ -12,6 +12,19 @@ const details = [
     gallery: ['/images/logo_patches_2.jpeg', '/images/kiss_hat_tshirt.jpeg', '/images/towels.jpeg'],
   },
   {
+    slug: 'blanks',
+    title: 'Blank Apparel',
+    lede: 'Quality plain garments in stock, ready to buy on their own.',
+    body: 'Buy them plain, or have us embroider or print your design onto them in the same visit.',
+    points: ['Tees, polos, jerseys & hoodies', 'Caps & headwear', 'Workwear & hi-vis'],
+    note: {
+      label: 'Official AS Colour wholesaler',
+      text: 'We’re an official AS Colour wholesaler, so you can order their premium blanks directly through us!',
+    },
+    hero: '/images/blanks-rack.jpg',
+    gallery: ['/images/folded-blanks.jpg', '/images/heart-cap.jpg', '/images/white-blanks.jpg'],
+  },
+  {
     slug: 'vinyl-printing',
     title: 'Vinyl Printing',
     lede: 'Bold, durable prints for names, numbers and single-colour logos.',
@@ -74,6 +87,13 @@ export default function Services() {
                   </ul>
                 </Reveal>
               </div>
+              {/* sits outside .split so it spans the full container width */}
+              {s.note && (
+                <Reveal delay={80} className="brand-note">
+                  <span className="brand-note__label">{s.note.label}</span>
+                  <p>{s.note.text}</p>
+                </Reveal>
+              )}
               <Reveal delay={80} style={{ marginTop: 'clamp(2.1rem, 4.25vw, 3.4rem)' }}>
                 <Gallery images={s.gallery} label={s.title} />
               </Reveal>

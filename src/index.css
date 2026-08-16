@@ -581,6 +581,39 @@ p {
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: clamp(1.5rem, 2.5vw, 2.4rem);
 }
+
+/* option A — four across, collapsing to 2x2 then a single column */
+.svc-grid--four {
+  grid-template-columns: repeat(4, 1fr);
+}
+/* narrower columns need a slightly smaller heading to avoid ragged wrapping */
+.svc-grid--four .svc-card h3 {
+  font-size: 1.42rem;
+}
+.svc-grid--four .svc-card p {
+  font-size: 0.97rem;
+}
+
+/* option B — two across. A 1/1 crop would be ~520px tall at this width,
+   so the media is widened to keep the section a sensible height. */
+.svc-grid--two {
+  grid-template-columns: repeat(2, 1fr);
+}
+.svc-grid--two .svc-card__media {
+  aspect-ratio: 4 / 3;
+}
+
+@media (max-width: 960px) {
+  .svc-grid--four {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 720px) {
+  .svc-grid--four,
+  .svc-grid--two {
+    grid-template-columns: 1fr;
+  }
+}
 .svc-card {
   display: grid;
   gap: 1.1rem;
@@ -725,6 +758,35 @@ p {
   margin-top: clamp(3.5rem, 7vw, 6rem);
   padding-top: clamp(3.5rem, 7vw, 6rem);
   border-top: 1px solid var(--line);
+}
+
+/* ---------- official brand credential ---------- */
+/* full-width banner — sits outside .split, so it spans the whole container */
+.brand-note {
+  display: grid;
+  justify-items: center;
+  gap: 0.6rem;
+  margin-top: clamp(2.1rem, 4.25vw, 3.4rem);
+  padding: clamp(1.1rem, 2.2vw, 1.5rem) clamp(1.2rem, 2.6vw, 1.9rem);
+  border: 1px solid var(--gold-line);
+  border-radius: var(--radius);
+  background: rgba(184, 145, 89, 0.06);
+  text-align: center;
+}
+.brand-note__label {
+  font-family: var(--f-sans);
+  font-weight: 700;
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.brand-note p {
+  /* keeps a readable measure if the sentence ever wraps at this width */
+  max-width: 78ch;
+  margin: 0;
+  font-size: 1.04rem;
+  color: var(--ink-soft);
 }
 
 /* ---------- process steps ---------- */
