@@ -1,8 +1,13 @@
-import { Link } from 'react-router-dom'
+import { Link, useSearchParams } from 'react-router-dom'
 import Reveal from '../components/Reveal'
 import { services, business } from '../data'
 
 export default function Home() {
+  // TEMP preview toggle: ?layout=2x2 shows the two-across variant.
+  // Delete this (and the unused .svc-grid--* rule) once a layout is chosen.
+  const [params] = useSearchParams()
+  const gridLayout = params.get('layout') === '2x2' ? 'svc-grid--two' : 'svc-grid--four'
+
   return (
     <>
       {/* thread-spool image band, directly below the nav */}
@@ -51,12 +56,17 @@ export default function Home() {
             </Reveal>
           </div>
 
-          <div className="svc-grid">
+          <div className={`svc-grid ${gridLayout}`}>
             {services.map((s, i) => (
               <Reveal key={s.slug} delay={i * 90}>
                 <Link to={`/services#${s.slug}`} className="svc-card">
                   <div className="svc-card__media">
-                    <img src={s.image} alt={`${s.title} at Speedy Monograms`} loading="lazy" />
+                    <img
+                      src={s.image}
+                      alt={`${s.title} at Speedy Monograms`}
+                      loading="lazy"
+                      style={s.focus ? { objectPosition: s.focus } : undefined}
+                    />
                   </div>
                   <h3>{s.title}</h3>
                   <p>{s.short}</p>

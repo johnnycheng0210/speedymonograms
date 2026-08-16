@@ -27,6 +27,14 @@ export const services = [
     image: '/images/embroidery_machine.jpeg',
   },
   {
+    slug: 'blanks',
+    title: 'Blank Apparel',
+    short: 'Quality blank tees, jerseys, caps and workwear.',
+    image: '/images/folded-blanks.jpg',
+    // the stack sits right of centre, so nudge the square crop across
+    focus: '62% 50%',
+  },
+  {
     slug: 'vinyl-printing',
     title: 'Vinyl Printing',
     short: 'Bold, durable prints for names, numbers and logos.',
